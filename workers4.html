@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEY WORKERS - Worker Profiles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --available-color: #27ae60;
+            --unavailable-color: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f7;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .worker-profiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .worker-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .worker-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .worker-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+
+        .worker-card h3 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+
+        .worker-details {
+            font-size: 0.9rem;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+
+        .availability {
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            color: white;
+        }
+
+        .available {
+            background-color: var(--available-color);
+        }
+
+        .unavailable {
+            background-color: var(--unavailable-color);
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Hey Workers</h1>
+        <p>Meet Our Skilled Workers</p>
+    </div>
+
+    <div class="container">
+        <div class="worker-profiles">
+            <!-- Worker 1 -->
+            <div class="worker-card">
+                <img src= "abraham.jpg" alt=" Worker Photo" class="worker-photo">
+                <h3>Abraham</h3>
+                <div class="availability available">Available</div>
+                <div class="worker-details">
+                    <p><strong>Age:</strong>50</p>
+                    <p><strong>Sex:</strong> Male</p>
+                    <p><strong>Experience:</strong> 10 years</p>
+                    <p><strong>Location:</strong> Athira Nagar</p>
+                    <div class="worker-rating">
+                        <span class="stars">⭐⭐⭐⭐☆</span>
+                        <span class="rating-number">(4.0)</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Worker 2 -->
+            <div class="worker-card">
+                <img src= "vil.jpg"alt="Worker Photo" class="worker-photo">
+                <h3>Vilasini</h3>
+                <div class="availability unavailable">Unavailable</div>
+                <div class="worker-details">
+                    <p><strong>Age:</strong> 61</p>
+                    <p><strong>Sex:</strong> Female</p>
+                    <p><strong>Experience:</strong> 6 years</p>
+                    <p><strong>Location:</strong> Ummini</p>
+                    <div class="worker-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-number">(5.0)</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Worker 3 -->
+            <div class="worker-card">
+                <img src="krish.jpg" alt="Worker Photo" class="worker-photo">
+                <h3>Krishnankutty</h3>
+                <div class="availability available">Available</div>
+                <div class="worker-details">
+                    <p><strong>Age:</strong> 39</p>
+                    <p><strong>Sex:</strong> Male</p>
+                    <p><strong>Experience:</strong> 15 years</p>
+                    <p><strong>Location:</strong> Akathetara</p>
+                    <div class="worker-rating">
+                        <span class="stars">⭐⭐⭐⭐☆</span>
+                        <span class="rating-number">(4.0)</span>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Worker 4 -->
+            <div class="worker-card">
+                <img src="rama.jpg" alt="Worker Photo" class="worker-photo">
+                <h3>Rama</h3>
+                <div class="availability unavailable">Unavailable</div>
+                <div class="worker-details">
+                    <p><strong>Age:</strong>55</p>
+                    <p><strong>Sex:</strong> Female</p>
+                    <p><strong>Experience:</strong> 8 years</p>
+                    <p><strong>Location:</strong>Gandhi Nagar</p>
+                    <div class="worker-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-number">(5.0)</span>
+                    </div>
+                    
+                </div>
+            </div>
+             <!-- Worker 5 -->
+             <div class="worker-card">
+                <img src= "gopalan.jpg" alt="Worker Photo" class="worker-photo">
+                <h3>Pusphan</h3>
+                <div class="availability available">Available</div>
+                <div class="worker-details">
+                    <p><strong>Age:</strong>50</p>
+                    <p><strong>Sex:</strong> Male</p>
+                    <p><strong>Experience:</strong> 10 years</p>
+                    <p><strong>Location:</strong> Cheekuzhi</p>
+                    <div class="worker-rating">
+                        <span class="stars">⭐⭐⭐☆☆</span>
+                        <span class="rating-number">(3.0)</span>
+                    </div>
+                    
+                </div>
+            </div>
+             <!-- Worker 6 -->
+             <div class="worker-card">
+                <img src="carpenter 4.jpg" alt="Worker Photo" class="worker-photo">
+                <h3>Gopalan</h3>
+                <div class="availability available">Available</div>
+                <div class="worker-details">
+                    <p><strong>Age:</strong> 49</p>
+                    <p><strong>Sex:</strong> Male</p>
+                    <p><strong>Experience:</strong> 15 years</p>
+                    <p><strong>Location:</strong> Olavakode</p>
+                    <div class="worker-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-number">(5.0)</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Daily Hire. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
